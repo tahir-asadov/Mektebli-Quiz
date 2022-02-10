@@ -1,13 +1,15 @@
 import React from 'react';
+
 import Quizzes from '../quizzes';
 
 import styles from './sidebar.module.scss';
 
-export default function Sidebar() {
+export default function Sidebar( { token } ) {
 
   return <div className={styles.sidebar}>
 
-    <Quizzes />
+    <Quizzes token={ token } />
 
   </div>;
+  
 }

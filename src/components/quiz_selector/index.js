@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation }  from "react-router-dom";
 
 import styles from './quiz_selector.module.scss';
 
@@ -10,14 +10,21 @@ export default function QuizSelector( { token } ) {
   let navigate = useNavigate();
 
   const { pathname } = useLocation()
+
   const quiz_id = pathname.replace( '/quiz/', '' );
 
   const changeQuiz = ( e ) => {
-    if(e.target.value > 0) {
-      navigate(`/quiz/${e.target.value}`);
+  
+    if( e.target.value > 0 ) {
+      
+      navigate( `/quiz/${e.target.value}` );
+      
     }else {
-      navigate(`/`);
+  
+      navigate( `/` );
+  
     }
+  
   }
 
   useEffect(() => {
@@ -31,30 +38,51 @@ export default function QuizSelector( { token } ) {
           'Authorization': `Bearer ${token}`
         }
       } )
-      .then( resp => resp.json() )
-      .then( resp => {
-        if( resp.statusCode && resp.statusCode != 200 ) {
-          console.log('error', resp);
-        }else {
-          setQuizzes(resp);
-        }
-      } )
-      .catch( ( error ) => {
-        console.log('error', error);
-      });
-    }
 
+      .then( resp => resp.json() )
+      
+      .then( resp => {
+      
+        if( resp.statusCode && resp.statusCode != 200 ) {
+      
+          console.log( 'error', resp );
+      
+        }else {
+      
+          setQuizzes( resp );
+      
+        }
+      
+      } )
+      
+      .catch( ( error ) => {
+      
+        console.log( 'error', error );
+      
+      });
+      
+    }
 
   }, []);
 
   return (
+
     <div>
-      <select className={styles.selector} onChange={changeQuiz}>
-        <option value="0">Select a quiz</option>
-        {quizzes && quizzes.map( ( quiz, index ) => (
-          <option value={quiz.id} selected={ quiz_id == quiz.id ? 'selected' : '' } key={index}>{quiz.title}</option>
-        ) )}
+
+      <select className={ styles.selector } onChange={ changeQuiz }>
+
+        <option value="0">Выберите тест</option>
+
+        { quizzes && quizzes.map( ( quiz, index ) => (
+
+          <option value={ quiz.id } selected={ quiz_id == quiz.id ? 'selected' : '' } key={ index }>{ quiz.title }</option>
+
+        ) ) }
+
       </select>
+
     </div>
+
   )
+
 }

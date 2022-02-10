@@ -3,7 +3,9 @@ import React from 'react';
 import styles from './error.module.scss';
 
 export default function Error( { error } ) {
-  return <div className={ styles.Error }>
+  
+  return <div className={ styles.error }>
     { error }
   </div>;
+
 }
