@@ -1,0 +1,21 @@
+.timer {
+  .quiz-timer {
+    text-align: center;
+    font-size: 35px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .quiz-timer-dash {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  .quiz-timer i {
+    margin-right: 10px;
+  }
+  .quiz-timer-seconds {
+  
+  }
+}

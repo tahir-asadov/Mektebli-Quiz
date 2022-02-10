@@ -1,0 +1,33 @@
+.result {
+  padding: 20px;
+  h3 {
+    font-size: 30px;
+    padding: 20px 0;
+    color: #ffaa30;
+  }
+  > div > div {
+    padding-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    tr {
+      td:first-child {
+        font-weight: bold;
+        text-align: left;
+      }
+      td:last-child {
+        text-align: right;
+      }
+      td {
+        border-bottom: dashed 1px #e6e6e6;
+        padding: 5px;
+      }
+      &:first-child {
+        td {
+          border-top: dashed 1px #e6e6e6;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.selector {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .selector {
+    display: block;
+  }
+}

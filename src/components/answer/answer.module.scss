@@ -1,0 +1,13 @@
+.answer {
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    input {
+      position: relative;
+      top: -2px;
+    }
+  }
+}

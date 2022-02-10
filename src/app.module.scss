@@ -1,0 +1,36 @@
+.app-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 60px auto 50px;
+  height: 100%;
+  .header {
+    grid-column: 1/-1;
+  }
+  .footer {
+    grid-column: 1/-1;
+  }
+  a {
+    color: #428bdc;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 1fr;
+    .sidebar {
+      display: none;
+    }
+    .header {
+      grid-column: 1;
+    }
+    .footer {
+      grid-column: 1;
+    }
+  }
+}

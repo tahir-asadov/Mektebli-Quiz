@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: solid 1px #e6e6e6;
+  .logo {
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+      svg {
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+  .logout {
+    color: orange;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    // flex-direction: column;
+    .logo {
+      a {
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+    .user-info {
+      font-size: 13px;
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+}
