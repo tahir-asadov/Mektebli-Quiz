@@ -11,6 +11,7 @@ import Sidebar      from './components/sidebar';
 import Footer       from './components/footer';
 import Login        from './components/login';
 import QuizSelector from './components/quiz_selector';
+import ErrorBoundary from './components/error_boundary';
 
 import styles  from './app.module.scss';
 
@@ -21,7 +22,7 @@ function App() {
 
   return (
     
-    <Fragment>
+    <ErrorBoundary>
 
       {token ? (
 
@@ -69,7 +70,7 @@ function App() {
 
       )}
 
-    </Fragment>
+    </ErrorBoundary>
 
   );
 
