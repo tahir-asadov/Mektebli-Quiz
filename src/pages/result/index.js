@@ -10,7 +10,7 @@ export default function Result( { token } ) {
   
   const [ error,   setError ]   = useState( null );
   const [ loading, setLoading ] = useState( null );
-  const [ result,  setResult ]  = useState( false );
+  const [ result,  setResult ]  = useState( null );
 
   const { id } = useParams();
 
