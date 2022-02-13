@@ -128,7 +128,7 @@ export default function Quiz( { quiz, token } ) {
       
       <div className="flex-center">
       
-        <div onClick={ validateQuiz } className={ `button ${styles.button}` }>Проверить</div>
+        <div onClick={ validateQuiz } className={ `button submit-quiz ${styles.button}` }>Проверить</div>
       
       </div>
 
