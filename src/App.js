@@ -14,6 +14,7 @@ import QuizSelector  from './components/quiz_selector';
 import ErrorBoundary from './components/error_boundary';
 
 import styles  from './app.module.scss';
+import Results from './pages/results';
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
               <Route path="/quiz/:id" element={ <Quiz token={ token } /> } />
 
               <Route path="/result/:id" element={ <Result token={ token } />} />
+              <Route path="/results" element={ <Results token={ token } />} />
 
             </Routes>
 
@@ -65,10 +67,8 @@ function App() {
         </div>
 
       ) : (
-        <div>
-          <input type="asdasd" data-testid="boo" />
-          <Login setToken={ setToken } setUser={ setUser } />
-        </div>
+
+        <Login setToken={ setToken } setUser={ setUser } />
 
       )}
 

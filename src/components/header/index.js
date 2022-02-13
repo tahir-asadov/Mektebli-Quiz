@@ -27,7 +27,7 @@ export default function Header( { user, setToken, setUser } ) {
 
     <div className={ styles["user-info"] }>
 
-      Добро пожаловать, <b>&nbsp;{ user ? user.displayName : '' } </b>
+      Добро пожаловать, <b>&nbsp;<Link to="/results">{ user ? user.displayName : '' }</Link> </b>
       <span title="Выйти" onClick={ logOut } className={ styles.logout }><AiOutlineLogout /></span>
     </div>
 

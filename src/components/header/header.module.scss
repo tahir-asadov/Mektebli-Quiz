@@ -17,6 +17,10 @@
   .user-info {
     display: flex;
     align-items: center;
+    a {
+      text-decoration: none;
+      color: black;
+    }
     span {
       display: flex;
       align-items: center;
