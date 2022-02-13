@@ -65,8 +65,10 @@ function App() {
         </div>
 
       ) : (
-
-        <Login setToken={ setToken } setUser={ setUser } />
+        <div>
+          <input type="asdasd" data-testid="boo" />
+          <Login setToken={ setToken } setUser={ setUser } />
+        </div>
 
       )}
 

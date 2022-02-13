@@ -69,11 +69,11 @@ export default function Login( { setToken, setUser } ) {
 
       { error && <Error error={ error } /> }
 
-      <input type="text" onChange={ upadteUsername } value={ username } placeholder="Имя пользователя" required/>
+      <input type="text" data-testid="username" onChange={ upadteUsername } value={ username } placeholder="Имя пользователя" required/>
       
-      <input type="password" onChange={ upadtePassword } value={ password } placeholder="Пароль" required/>
+      <input type="password" data-testid="password" onChange={ upadtePassword } value={ password } placeholder="Пароль" required/>
       
-      <input type="submit" value={ loading ? "Загружается..." : "Логин" } />
+      <input type="submit" data-testid="submit-button" value={ loading ? "Загружается..." : "Логин" } />
 
     </form>
 
