@@ -1,16 +1,16 @@
 
-import { useState, Fragment } from 'react';
-import { Routes, Route }      from "react-router-dom";
+import { useState }      from 'react';
+import { Routes, Route } from "react-router-dom";
 
-import Home         from './pages/home';
-import Quiz         from './pages/quiz';
-import Result       from './pages/result';
+import Home          from './pages/home';
+import Quiz          from './pages/quiz';
+import Result        from './pages/result';
 
-import Header       from './components/header';
-import Sidebar      from './components/sidebar';
-import Footer       from './components/footer';
-import Login        from './components/login';
-import QuizSelector from './components/quiz_selector';
+import Header        from './components/header';
+import Sidebar       from './components/sidebar';
+import Footer        from './components/footer';
+import Login         from './components/login';
+import QuizSelector  from './components/quiz_selector';
 import ErrorBoundary from './components/error_boundary';
 
 import styles  from './app.module.scss';
