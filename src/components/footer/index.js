@@ -8,7 +8,7 @@ export default function Footer() {
 
     <div className={ styles.footer }>
 
-      <p>Copyright © { ( new Date().getFullYear() ) }. Создано <a target="_blank" href="https://tahirasadov.com">Таиром Асадовым</a>. Все права защищены.</p>
+      <p>Copyright © { ( new Date().getFullYear() ) }. Создано <a target="_blank" href="https://tahir-asadov.github.io">Таиром Асадовым</a>. Все права защищены.</p>
 
     </div>
 
