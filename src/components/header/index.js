@@ -1,9 +1,16 @@
 import React               from 'react';
 import { Link }            from "react-router-dom";
-import { AiOutlineLogout } from "react-icons/ai";
 
-import logo   from '../../logo.png';
-import styles from './header.module.scss';
+import {
+  RiLogoutCircleRLine,
+  RiUser3Line,
+  RiNumbersFill,
+  RiSurveyLine
+} from "react-icons/ri";
+
+import logo          from '../../logo.png';
+import mobile_logo   from '../../mobile_logo.png';
+import styles        from './header.module.scss';
 
 export default function Header( { user, setToken, setUser } ) {
 
@@ -19,17 +26,25 @@ export default function Header( { user, setToken, setUser } ) {
 
       <Link to="/">
 
-        <img src={ logo } alt="Mektebli logo" />
+        <img src={ logo } className={ styles.desktop } alt="Mektebli logo" />
+        <img src={ mobile_logo } className={ styles.mobile } alt="Mektebli logo" />
 
       </Link>
 
     </div>
 
-    <div className={ styles["user-info"] }>
+    <div className={ styles.menu }>
+      <Link title="Профиль" to="/profile"><RiUser3Line /></Link>
+      <Link title="Тесты" to="/"><RiSurveyLine /></Link>
+      <Link title="Результаты" to="/results"><RiNumbersFill /></Link>
+      <span title="Выйти" onClick={ logOut } className={ styles.logout }><RiLogoutCircleRLine /></span>
+    </div>
 
+    {/* <div className={ styles["user-info"] }>
+      
       Добро пожаловать, <b>&nbsp;<Link to="/results">{ user ? user.displayName : '' }</Link> </b>
       <span title="Выйти" onClick={ logOut } className={ styles.logout }><AiOutlineLogout /></span>
-    </div>
+    </div> */}
 
   </div>;
 

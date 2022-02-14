@@ -12,6 +12,9 @@
       height: 100%;
       img {
         max-width: 200px;
+        &.mobile {
+          display: none;
+        }
       }
     }
   }
@@ -32,6 +35,17 @@
       }
     }
   }
+  .menu {
+    font-size: 25px;
+    display: flex;
+    a, span {
+      display: inline-block;
+      padding: 5px;
+    }
+    a {
+      color: #333333;
+    }
+  }
   .logout {
     color: orange;
   }
@@ -42,15 +56,21 @@
     .logo {
       a {
         img {
-          max-width: 100px;
+          max-width: 60px;
+          &.desktop {
+            display: none;
+          }
+          &.mobile {
+            display:block;
+          }
         }
       }
     }
-    .user-info {
-      font-size: 13px;
-      span {
-        font-size: 13px;
-      }
-    }
+    // .user-info {
+    //   font-size: 13px;
+    //   span {
+    //     font-size: 13px;
+    //   }
+    // }
   }
 }
