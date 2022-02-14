@@ -65,3 +65,29 @@ select {
 .hidden {
   display: none;
 }
+
+.custom-scroll {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #e6e6e6 #ffffff;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  height: 100%;
+  width: 3px;
+  background: #ffffff;
+  -webkit-border-radius: 0;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  background: #ffffff;
+}
+
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
+}
+
+.custom-scroll::-webkit-scrollbar-corner {
+  background: #ffffff;
+}

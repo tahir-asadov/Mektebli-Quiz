@@ -73,7 +73,7 @@ export default function Quizzes( { token } ) {
 
     { quizzes ? 
 
-      <div className={`quiz-list ${ styles.list }`}>
+      <div className={`quiz-list custom-scroll ${ styles.list }`}>
 
       { quizzes.map( ( quiz, index ) => (
 

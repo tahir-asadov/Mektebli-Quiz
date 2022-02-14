@@ -1,12 +1,14 @@
 .quizzes {
+  height: 100%;
   h2 {
     padding: 20px 0;
   }
 }
 
 .list {
-  max-height: 400px;
+  max-height: calc( 100vh - 200px);
   overflow-y: auto;
+  padding-right: 10px;
   a {
     display: block;
     border-bottom: solid 1px #e6e6e6;
