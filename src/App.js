@@ -15,6 +15,7 @@ import ErrorBoundary from './components/error_boundary';
 
 import styles  from './app.module.scss';
 import Results from './pages/results';
+import Profile from './pages/profile';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
 
           <div className={ styles.header }>
 
-            <Header setToken={ setToken } setUser={ setUser } user={ user } />
+            <Header setToken={ setToken } setUser={ setUser } />
 
           </div>
 
@@ -52,8 +53,11 @@ function App() {
               <Route path="/quiz/:id" element={ <Quiz token={ token } /> } />
 
               <Route path="/result/:id" element={ <Result token={ token } />} />
+
               <Route path="/results" element={ <Results token={ token } />} />
 
+              <Route path="/profile" element={ <Profile user={ user } />} />
+              
             </Routes>
 
           </div>

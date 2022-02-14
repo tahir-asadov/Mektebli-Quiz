@@ -12,7 +12,7 @@ import logo          from '../../logo.png';
 import mobile_logo   from '../../mobile_logo.png';
 import styles        from './header.module.scss';
 
-export default function Header( { user, setToken, setUser } ) {
+export default function Header( { setToken, setUser } ) {
 
   const logOut = () => {
 
