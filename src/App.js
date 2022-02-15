@@ -26,7 +26,7 @@ function App() {
     
     <ErrorBoundary>
 
-      {token ? (
+      { token ? (
 
         <div className={ styles[ "app-container" ] }>
 
@@ -74,7 +74,7 @@ function App() {
 
         <Login setToken={ setToken } setUser={ setUser } />
 
-      )}
+      ) }
 
     </ErrorBoundary>
 
