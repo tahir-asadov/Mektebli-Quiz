@@ -4,8 +4,6 @@ import styles from './profile.module.scss';
 
 export default function Profile( { user } ) {
 
-  console.log(user);
-
   return (
   
     <div className={ styles.profile }>

@@ -64,7 +64,7 @@ export default function Quizzes( { token } ) {
   
   return <div className={ styles.quizzes }>
 
-    <h2>Тесты ({ quizzes ? quizzes.length : 0 })</h2>
+    <h2>Тесты ({ quizzes ? quizzes.length : '' })</h2>
 
     { error && <Error error={ error } />}
 

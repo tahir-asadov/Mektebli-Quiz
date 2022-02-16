@@ -6,6 +6,8 @@ import Loading    from '../../components/loading';
 import Error      from '../../components/error';
 import SingleQuiz from '../../components/quiz';
 
+import styles from './quiz.module.scss';
+
 export default function Quiz( { token } ) {
 
   const { id } = useParams();
@@ -69,7 +71,7 @@ export default function Quiz( { token } ) {
 
   }, [ id ] );
 
-  return <div>
+  return <div className={ styles.quiz }>
     
     { error && <Error error={ error } />}
     { loading && <Loading /> }

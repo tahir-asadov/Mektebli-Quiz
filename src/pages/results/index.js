@@ -69,6 +69,8 @@ export default function Results( { token } ) {
       { results.length > 0 ? (
         <div className={ styles.list }>
 
+          <h1>Результаты ({ results ? results.length : '' })</h1>
+
           { results.map( result => {
           
             return <Link to={ `/result/${result.id}` }>{ result.quiz_title }</Link>
