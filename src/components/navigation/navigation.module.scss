@@ -1,0 +1,13 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 10px 0;
+  border-bottom: #e6e6e6 solid 1px;
+  margin-bottom: 10px;
+  > svg {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffaa30;
+  }
+}

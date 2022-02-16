@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
-import Loading from '../../components/loading';
-import Error   from '../../components/error';
+import Loading    from '../../components/loading';
+import Error      from '../../components/error';
+import Navigation from '../../components/navigation';
 
 import styles from './result.module.scss';
 
@@ -73,6 +74,8 @@ export default function Result( { token } ) {
   { error && <Error error={ error } />}
 
   { loading && <Loading /> }
+
+  <Navigation />
 
   <div dangerouslySetInnerHTML={ { __html: result } }></div>
 

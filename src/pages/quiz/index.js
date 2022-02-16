@@ -74,7 +74,9 @@ export default function Quiz( { token } ) {
   return <div className={ styles.quiz }>
     
     { error && <Error error={ error } />}
+
     { loading && <Loading /> }
+
     { quiz && <SingleQuiz token={ token } quiz={ quiz } /> }
 
   </div>;

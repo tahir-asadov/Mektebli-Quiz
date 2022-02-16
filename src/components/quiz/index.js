@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-import Question from '../question';
-import Loading  from '../loading';
-import Error    from '../error';
-import Timer    from '../timer';
+import Question   from '../question';
+import Loading    from '../loading';
+import Error      from '../error';
+import Timer      from '../timer';
+import Navigation from '../navigation';
 
 import styles from './quiz.module.scss';
 
@@ -108,6 +109,8 @@ export default function Quiz( { quiz, token } ) {
 
   return <div className={ styles.quiz }>
     
+    <Navigation />
+
     <h1>{ quiz.quiz.title }</h1>
     
     { loading && <Loading /> }

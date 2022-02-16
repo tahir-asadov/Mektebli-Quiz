@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
-import Loading from '../../components/loading';
+import Loading    from '../../components/loading';
+import Navigation from '../../components/navigation';
 
 import styles from './results.module.scss';
 
@@ -67,7 +68,10 @@ export default function Results( { token } ) {
       { loading && <Loading /> }
 
       { results.length > 0 ? (
+
         <div className={ styles.list }>
+
+          <Navigation />
 
           <h1>Результаты ({ results ? results.length : '' })</h1>
 
@@ -78,6 +82,7 @@ export default function Results( { token } ) {
           } ) }
 
         </div>
+
       ) : (
 
         ! loading && 'Нет результатов'
