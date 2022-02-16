@@ -65,23 +65,28 @@ export default function Results( { token } ) {
 
     <div className={ styles.results }>
 
+      <Navigation />
+
       { loading && <Loading /> }
 
       { results.length > 0 ? (
 
-        <div className={ styles.list }>
-
-          <Navigation />
+        <>
 
           <h1>Результаты ({ results ? results.length : '' })</h1>
 
-          { results.map( result => {
-          
-            return <Link to={ `/result/${result.id}` }>{ result.quiz_title }</Link>
-          
-          } ) }
+          <div className={ styles.list }>
 
-        </div>
+
+            { results.map( result => {
+
+              return <Link className={ styles.link } to={ `/result/${result.id}` }><b>{ result.quiz_title }</b> - <span>{ result.takendate }</span></Link>
+            
+            } ) }
+
+          </div>
+
+        </>
 
       ) : (
 

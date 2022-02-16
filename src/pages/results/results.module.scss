@@ -4,15 +4,22 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    a {
+    h1 {
+      padding-bottom: 10px;
+    }
+    a.link {
       display: block;
       width: 100%;
       text-align: left;
-      padding: 5px 0;
+      padding: 10px 0;
       margin: 3px 0;
       color: #333333;
       text-decoration: none;
       border-bottom: solid 1px #e6e6e6;
+      &:first-child {
+        border-top: solid 1px #e6e6e6;
+        margin-top: 10px;
+      }
     }
   }
 }
