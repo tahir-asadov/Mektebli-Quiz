@@ -12,6 +12,11 @@
     line-height: 1;
     margin: 10px 0;
   }
+  > div {
+    text-align: center;
+    width: 60%;
+    max-width: 300px;
+  }
   code {
     color: gray;
   }
