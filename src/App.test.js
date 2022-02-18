@@ -1,36 +1,71 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import { act, Simulate }                       from 'react-dom/test-utils';
 import { BrowserRouter }             from 'react-router-dom';
+import React             from 'react';
+// import ReactDOM from 'react-dom';
+
+let container;
+
+// beforeEach( () => {
+
+//   container = document.createElement( 'div' );
+
+//   document.body.appendChild( container );
+
+// } );
+
+// afterEach( () => {
+
+//   document.body.removeChild( container );
+
+//   container = null;
+
+// } );
 
 import App from './App';
 
 const MockApp = () => {
 
-  return <BrowserRouter>
+  return <React.StrictMode>
+    
+  <BrowserRouter>
 
     <App />
 
   </BrowserRouter>
 
+</React.StrictMode>
+
 }
 
-it('Login in a valid user', async () => {
+it('User can login with valid credentials', async () => {
   
-  render( <MockApp /> );
+  await act( async () => {
+    render( <MockApp /> );
+  });
 
   const username = screen.getByPlaceholderText( /Имя пользователя/i );
-  fireEvent.change( username, { target: { value: 'admin' } } )
 
   const password = screen.getByPlaceholderText( /Пароль/i );
-  fireEvent.change( password, { target: { value: 'admin' } } )
 
   const submitButton = screen.getByRole( "button", { name: /Логин/i } );
 
-  fireEvent.click(submitButton);
+  await act( async () => {
+
+    fireEvent.change( username, { target: { value: 'admin' } } )
+
+    fireEvent.change( password, { target: { value: 'admin' } } )
+
+    fireEvent.click( submitButton );
+
+  });
 
   const heading = await screen.findByText( /Выберите тест для запуска/i );
 
-  expect( heading ).toBeInTheDocument();
+  const testHeading = await screen.findByText( /Тесты/i );
 
-  // screen.debug();
+  
+  expect( heading ).toBeInTheDocument();
+  expect( testHeading ).toBeInTheDocument();
   
 });
