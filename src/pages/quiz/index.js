@@ -65,7 +65,7 @@ export default function Quiz( { token } ) {
 
       setError( error );
 
-      console.log( 'error', error );
+      console.error( 'error',, error );
 
     });
 

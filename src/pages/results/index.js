@@ -56,7 +56,7 @@ export default function Results( { token } ) {
 
       setLoading( false );
 
-      console.log( 'error', error );
+      console.error( 'error',, error );
 
     });
   }, [] );

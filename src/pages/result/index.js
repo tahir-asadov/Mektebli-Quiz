@@ -63,7 +63,7 @@ export default function Result( { token } ) {
 
       setError( error );
 
-      console.log( 'error', error );
+      console.error( 'error',, error );
 
     });
 

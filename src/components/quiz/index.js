@@ -76,7 +76,7 @@ export default function Quiz( { quiz, token } ) {
     .catch( ( error ) => {
 
       setError( error );
-      console.log( 'error', error );
+      console.error( 'error',, error );
 
     });
 

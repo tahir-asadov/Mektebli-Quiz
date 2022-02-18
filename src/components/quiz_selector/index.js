@@ -45,7 +45,7 @@ export default function QuizSelector( { token } ) {
       
         if( resp.statusCode && resp.statusCode != 200 ) {
       
-          console.log( 'error', resp );
+          console.error( 'error',, resp );
       
         }else {
       
@@ -57,7 +57,7 @@ export default function QuizSelector( { token } ) {
       
       .catch( ( error ) => {
       
-        console.log( 'error', error );
+        console.error( 'error',, error );
       
       });
       
