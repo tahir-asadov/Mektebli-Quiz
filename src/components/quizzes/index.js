@@ -54,7 +54,7 @@ export default function Quizzes( { token } ) {
 
         setLoading( false );
 
-        console.error( 'error',, error );
+        console.error( 'error', error );
 
       });
     }
