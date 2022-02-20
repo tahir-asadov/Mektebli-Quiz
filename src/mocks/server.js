@@ -42,8 +42,8 @@ export const server = setupServer(
       ctx.json(
         [
           {
-            "id": "102",
-            "title": "\u041f\u043e\u0437\u043d\u0430\u043d\u0438\u0435 \u043c\u0438\u0440\u0430 2\u043a\u043b\u0430\u0441\u0441 - \u041c\u0421\u041e\u21165",
+            "id": "1",
+            "title": "Quiz #1",
             "description": "",
             "shuffle_questions": "1",
             "shuffle_answers": "1",
@@ -55,8 +55,8 @@ export const server = setupServer(
             "num_of_taken": "51"
           },
           {
-            "id": "101",
-            "title": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a 2\u043a\u043b\u0430\u0441\u0441 \u0420\u0430\u0431\u043e\u0442\u0430 \u043d\u0430\u0434 \u0442\u0435\u043a\u0441\u0442\u043e\u043c",
+            "id": "2",
+            "title": "Quiz #2",
             "shuffle_questions": "1",
             "shuffle_answers": "1",
             "require_user_login": "0",
@@ -82,8 +82,8 @@ export const server = setupServer(
       ctx.json( 
         {
           "quiz": {
-            "id": "102",
-            "title": "\u041f\u043e\u0437\u043d\u0430\u043d\u0438\u0435 \u043c\u0438\u0440\u0430 2\u043a\u043b\u0430\u0441\u0441 - \u041c\u0421\u041e\u21165",
+            "id": "1",
+            "title": "The Quiz title",
             "description": "",
             "shuffle_questions": "1",
             "shuffle_answers": "1",
@@ -817,6 +817,24 @@ export const server = setupServer(
               "point": "0"
             }
           ]
+        }
+       ),
+
+    )
+
+  } ),
+
+  rest.post( 'http://mektebli.local/wp-json/symplequiz/v1/quiz/:quiz_id', ( req, res, ctx ) => {
+    
+    return res(
+
+      ctx.status( 200 ),
+
+      ctx.json( 
+        {
+          "status":"ok",
+          "message":"Validated",
+          "result_id":5135
         }
        ),
 
