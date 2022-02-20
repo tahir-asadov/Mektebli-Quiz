@@ -12,7 +12,7 @@ export default function Navigation() {
 
     <div className={ styles.navigation }>
     
-      <RiArrowLeftCircleLine onClick={ () => navigate( -1 ) } />
+      <RiArrowLeftCircleLine title="Назад" onClick={ () => navigate( -1 ) } />
  
     </div>
   )
