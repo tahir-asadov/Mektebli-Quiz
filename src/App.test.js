@@ -1,26 +1,17 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { act, Simulate }                       from 'react-dom/test-utils';
+import { act }                       from 'react-dom/test-utils';
 import { BrowserRouter }             from 'react-router-dom';
-import React             from 'react';
-// import ReactDOM from 'react-dom';
+import React                         from 'react';
 
-let container;
+beforeEach( async () => {
 
-// beforeEach( () => {
+  await act( async () => {
 
-//   container = document.createElement( 'div' );
+    render( <MockApp /> );
 
-//   document.body.appendChild( container );
+  });
 
-// } );
-
-// afterEach( () => {
-
-//   document.body.removeChild( container );
-
-//   container = null;
-
-// } );
+} );
 
 import App from './App';
 
@@ -40,10 +31,6 @@ const MockApp = () => {
 
 it('User can login with valid credentials', async () => {
   
-  await act( async () => {
-    render( <MockApp /> );
-  });
-
   const username = screen.getByPlaceholderText( /Имя пользователя/i );
 
   const password = screen.getByPlaceholderText( /Пароль/i );
@@ -63,9 +50,9 @@ it('User can login with valid credentials', async () => {
   const heading = await screen.findByText( /Выберите тест для запуска/i );
 
   const testHeading = await screen.findByText( /Тесты/i );
-
   
   expect( heading ).toBeInTheDocument();
+
   expect( testHeading ).toBeInTheDocument();
   
 });
