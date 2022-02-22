@@ -24,8 +24,9 @@ export default function Results( { token } ) {
     .then( resp => resp.json() )
 
     .then( resp => {
-      console.log('resp', resp);
+      
       setLoading( false );
+
       if( resp.statusCode && resp.statusCode != 200 ) {
 
         // setError( false );

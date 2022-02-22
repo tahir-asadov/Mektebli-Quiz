@@ -107,7 +107,7 @@ export default function Quiz( { quiz, token } ) {
 
   }
 
-  return <div className={ styles.quiz }>
+  return <div className={ `quiz ${ styles.quiz }` }>
     
     <Navigation />
 

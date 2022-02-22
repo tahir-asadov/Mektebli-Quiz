@@ -10,4 +10,16 @@
       margin-left: 5px;
     }
   }
+  &[question-type="2"] {
+
+  }
+  &[media-type="2"] {
+
+  }
+}
+.answers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

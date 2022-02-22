@@ -94,3 +94,34 @@ select {
 .custom-scroll::-webkit-scrollbar-corner {
   background: #ffffff;
 }
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.quiz {
+  h1 {
+    color: red;
+  }
+  img {
+    object-fit: contain;
+    height: initial;
+  }
+  .questions {
+    .question-description {
+      img {
+        display: block;
+      }
+    }
+  }
+  .answers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > div {
+      flex: 30% 0 1;
+    }
+  }
+}

@@ -16,10 +16,10 @@ export default function Question( { question, answers, index, shuffle_answers, u
 
   }
 
-  return <div className={ styles.question }>
+  return <div question-type={ question.type } media-type={ question.media_type } className={ styles.question }>
     <h3>{ index + 1 }) {
 
-    <div dangerouslySetInnerHTML={ { __html: question.description } }></div>
+    <div class="question-description" dangerouslySetInnerHTML={ { __html: question.description } }></div>
     
     }</h3>
     
