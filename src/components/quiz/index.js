@@ -19,11 +19,40 @@ export default function Quiz( { quiz, token } ) {
     
   }
 
-  const updateUserAnswers = ( question_id, answer_id ) => {
+  const updateUserAnswers = ( question_id, answer_id, e ) => {
     
-    let currentAnswer = { [ question_id ]: answer_id }
 
-    userAnswers = { ...userAnswers, ...currentAnswer }
+    if( e.target.type == 'text' ) {
+
+      userAnswers[ question_id ] = answer_id;
+      
+    }
+
+    if( e.target.type == 'checkbox' ) {
+
+      if( e.target.checked ) {
+
+        if( userAnswers[ question_id ] == undefined ) {
+  
+          userAnswers[ question_id ] = {};
+  
+        }
+  
+        userAnswers[ question_id ][answer_id] = answer_id;
+
+      }else {
+
+        delete userAnswers[ question_id ][answer_id];
+
+      }
+
+    }
+
+    if( e.target.type == 'radio' ) {
+
+      userAnswers[ question_id ] = answer_id;
+
+    }
 
   }
   

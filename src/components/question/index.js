@@ -26,7 +26,12 @@ export default function Question( { question, answers, index, shuffle_answers, u
     <div className="answers">
     
       {
-        answers.map( (answer, key) => <Answer key={ key } updateUserAnswers={ updateUserAnswers } answer={ answer } /> )
+        question.type == 3 ? (
+          <input type="text" onChange={ ( e ) => { updateUserAnswers( question.id, e.target.value, e ) } }/>
+        ) : (
+          answers.map( (answer, key) => <Answer type={ question.type } key={ key } updateUserAnswers={ updateUserAnswers } answer={ answer } /> )
+        )
+
       }
     
     </div>
