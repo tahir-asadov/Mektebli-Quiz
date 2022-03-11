@@ -75,6 +75,9 @@ export default function Login( { setToken, setUser } ) {
       
       <input type="submit" value={ loading ? "Загружается..." : "Логин" } />
 
+      <div className={ styles.register }>
+        <a target="_blank" href="https://mektebli.net/registracziya/">Регистрация</a>
+      </div>
     </form>
 
   </div>;
