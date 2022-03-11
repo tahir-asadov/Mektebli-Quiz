@@ -24,3 +24,14 @@
   max-width: 70%;
   margin: 0 auto 30px auto;
 }
+.register {
+  text-align: center;
+  padding: 5px 0;
+  a {
+    color: #428bdc;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+  }
+}
