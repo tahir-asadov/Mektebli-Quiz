@@ -842,4 +842,52 @@ export const server = setupServer(
 
   } ),
 
+  rest.get( 'http://mektebli.local/wp-json/symplequiz/v1/results', ( req, res, ctx ) => {
+    
+    return res(
+
+      ctx.status( 200 ),
+
+      ctx.json( 
+        {
+          "results":[
+             {
+                "id":"5158",
+                "quiz_id":"102",
+                "user_id":"2",
+                "num_of_questions":"16",
+                "correct":"1",
+                "incorrect":"0",
+                "total_points":"25",
+                "user_points":"5",
+                "timer_seconds":"15",
+                "data":"0",
+                "takendate":"2022-02-22 14:53:53",
+                "quiz_title":"\u041f\u043e\u0437\u043d\u0430\u043d\u0438\u0435 \u043c\u0438\u0440\u0430 2\u043a\u043b\u0430\u0441\u0441 - \u041c\u0421\u041e\u21165"
+             }     
+          ]
+        }
+       ),
+
+    )
+
+  } ),
+
+  rest.get( 'http://mektebli.local/wp-json/symplequiz/v1/result/:result_id', ( req, res, ctx ) => {
+    
+    return res(
+
+      ctx.status( 200 ),
+
+      ctx.json( 
+        {
+          "result":"<h3 style=\"text-align: center;\"><strong>\u041f\u043e\u0437\u0434\u0440\u0430\u0432\u043b\u044f\u0435\u043c!<\/strong><\/h3>\r\n<div class=\"quiz-text\">\u0412\u044b \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u043b\u0438 \u0442\u0435\u0441\u0442 <strong>\u041f\u043e\u0437\u043d\u0430\u043d\u0438\u0435 \u043c\u0438\u0440\u0430 2\u043a\u043b\u0430\u0441\u0441 - \u041c\u0421\u041e\u21165<\/strong>. \u0412\u044b \u043d\u0430\u0431\u0440\u0430\u043b\u0438 <strong><em>0<\/em><\/strong> \u0431\u0430\u043b\u043b\u043e\u0432 \u0438\u0437 <strong><em>25<\/em><\/strong> \u0431\u0430\u043b\u043b\u043e\u0432.<\/div>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td class=\"total-question-count\">\u041e\u0431\u0449\u0435\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432:<\/td>\r\n<td>16<\/td>\r\n<\/tr>\r\n<tr>\r\n<td class=\"answered-question-count\">\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0440\u0435\u0448\u0451\u043d\u043d\u044b\u0445 \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432:<\/td>\r\n<td>0<\/td>\r\n<\/tr>\r\n<tr>\r\n<td class=\"correct-answers-count\">\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0432\u0435\u0440\u043d\u044b\u0445 \u043e\u0442\u0432\u0435\u0442\u043e\u0432:<\/td>\r\n<td>0<\/td>\r\n<\/tr>\r\n<tr>\r\n<td class=\"incorrect-answers-count\">\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043d\u0435\u0432\u0435\u0440\u043d\u044b\u0445 \u043e\u0442\u0432\u0435\u0442\u043e\u0432:<\/td>\r\n<td>0<\/td>\r\n<\/tr>\r\n<tr>\r\n<td class=\"total-time\">\u0422\u0430\u0439\u043c\u0435\u0440:<\/td>\r\n<td>00:00:02<\/td>\r\n<\/tr>\r\n<\/tbody>\r\n<\/table>\r\n"
+       }
+       ),
+
+    )
+
+  } ),
+  
 )
+
